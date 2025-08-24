@@ -16,7 +16,7 @@ function Contact(){
                 <h2 className="font-medium text-3xl md:text-4xl xl:text-5xl mx-auto">Contact</h2>
                 <p className="text-lg text-pretty mx-5 text-gray-600 mt-5">Feel free to reach out for collaborations, inquiries, or just a chat!</p>
                 <div className="flex flex-col md:flex-row gap-6 items-center mt-5">
-                    <a href="mailto:sripad@example.com?subject=Portfolio%20Contact&body=Hi%20Sripad,"
+                    <a href="mailto:sripadadhi135@gmail.com?subject=Portfolio%20Contact&body=Hi%20Sripad,"
                         className="mt-5 px-6 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-600 hover:scale-110 transition-colors duration-200 transition-transform duration-500"
                         target="_blank" rel="noopener noreferrer">
                         Email
