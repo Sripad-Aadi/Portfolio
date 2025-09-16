@@ -1,12 +1,42 @@
-# React + Vite
+#  My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React to showcase my skills, projects, and achievements. This project is part of my React learning journey and serves as a practical application of modern frontend development concepts.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Modular Components – Built using reusable React components.
 
-## Expanding the ESLint configuration
+Project Showcase – Displays my projects with descriptions and links.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Responsive Design – Optimized for desktops, tablets, and mobile devices.
+
+Modern UI – Styled with Tailwind CSS (or CSS Modules, depending on your setup).
+
+Deployed Online – Hosted on [Vercel/GitHub Pages] for easy access.
+
+## Tech Stack
+
+React.js – Core framework
+
+React Router – Navigation & routing
+
+Tailwind CSS – Styling 
+
+Vercel – Deployment
+
+## Installation & Setup
+
+### Clone the repository:
+
+git clone https://github.com/Sripad-Aadi/Portfolio.git
+cd portfolio
+
+
+### Install dependencies:
+
+npm install
+
+
+### Run the development server:
+
+npm start
