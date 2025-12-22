@@ -12,6 +12,19 @@ import { BsFiletypeSql } from "react-icons/bs";
 import { SiMysql } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import {
+  SiJava,
+  SiC,
+  SiCplusplus,
+  SiPython,
+  SiFlask,
+  SiPandas,
+  SiNumpy
+} from "react-icons/si";
+
+import { FaBrain } from "react-icons/fa"; // fallback for ML / sklearn
+
+
 function Skills() {
   const { ref, inView } = useInView({
         threshold: 0.2, // Trigger when 20% of the component is visible
@@ -30,6 +43,16 @@ function Skills() {
     { name: 'powerbi',icon: <PiMicrosoftPowerpointLogoFill /> },
     { name: 'git',icon: <FaGitAlt /> },
     { name: 'github',icon: <FaGithub />},
+    { name: "Java", Icon: SiJava },
+    { name: "C", Icon: SiC },
+    { name: "C++", Icon: SiCplusplus },
+    { name: "Python", Icon: SiPython },
+
+    { name: "Flask", Icon: SiFlask },
+
+    { name: "Pandas", Icon: SiPandas },
+    { name: "NumPy", Icon: SiNumpy },
+    { name: "Scikit-learn", Icon: FaBrain },
     ]
   return (
     <section id="skills" className="flex flex-col justify-center items-center w-lvw h-full">
