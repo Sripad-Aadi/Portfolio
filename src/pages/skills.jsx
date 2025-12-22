@@ -12,17 +12,16 @@ import { BsFiletypeSql } from "react-icons/bs";
 import { SiMysql } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
+
+
 import {
-  SiJava,
-  SiC,
   SiCplusplus,
-  SiPython,
   SiFlask,
   SiPandas,
   SiNumpy
 } from "react-icons/si";
-
-import { FaBrain } from "react-icons/fa"; // fallback for ML / sklearn
+import { FaBrain, FaCode } from "react-icons/fa";
 
 
 function Skills() {
@@ -32,28 +31,30 @@ function Skills() {
   });
 
   const skills = [
-    { name: 'HTML', icon: <FaHtml5 /> },
-    { name: 'CSS', icon: <FaCss3 /> },
-    { name: 'Tailwind CSS', icon: <RiTailwindCssFill/> },
-    { name: 'JavaScript',icon: <IoLogoJavascript /> },
-    { name: 'React', icon: <FaReact /> },
-    { name: 'python',icon: <FaPython /> },
-    {name: 'sql',icon: <BsFiletypeSql />},
-    { name: 'mysql',icon: <SiMysql /> }, 
-    { name: 'powerbi',icon: <PiMicrosoftPowerpointLogoFill /> },
-    { name: 'git',icon: <FaGitAlt /> },
-    { name: 'github',icon: <FaGithub />},
-    { name: "Java", Icon: SiJava },
-    { name: "C", Icon: SiC },
-    { name: "C++", Icon: SiCplusplus },
-    { name: "Python", Icon: SiPython },
+  { name: 'HTML', icon: <FaHtml5 /> },
+  { name: 'CSS', icon: <FaCss3 /> },
+  { name: 'Tailwind CSS', icon: <RiTailwindCssFill /> },
+  { name: 'JavaScript', icon: <IoLogoJavascript /> },
+  { name: 'React', icon: <FaReact /> },
+  { name: 'Python', icon: <FaPython /> },
 
-    { name: "Flask", Icon: SiFlask },
+  { name: 'SQL', icon: <BsFiletypeSql /> },
+  { name: 'MySQL', icon: <SiMysql /> },
+  { name: 'Power BI', icon: <PiMicrosoftPowerpointLogoFill /> },
 
-    { name: "Pandas", Icon: SiPandas },
-    { name: "NumPy", Icon: SiNumpy },
-    { name: "Scikit-learn", Icon: FaBrain },
-    ]
+  { name: 'Git', icon: <FaGitAlt /> },
+  { name: 'GitHub', icon: <FaGithub /> },
+
+  { name: 'Java', icon: <FaJava /> },
+  { name: 'C', icon: <FaCode /> },          // fallback (no official C icon)
+  { name: 'C++', icon: <SiCplusplus /> },
+
+  { name: 'Flask', icon: <SiFlask /> },
+  { name: 'Pandas', icon: <SiPandas /> },
+  { name: 'NumPy', icon: <SiNumpy /> },
+  { name: 'Scikit-learn', icon: <FaBrain /> },
+];
+
   return (
     <section id="skills" className="flex flex-col justify-center items-center w-lvw h-full">
       <motion.div ref={ref}

@@ -40,7 +40,7 @@ function Home() {
                       initial={{ opacity: 0, x: -100 }}
                       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
                       transition={{ duration: 0.8 }} 
-      className={`w-8/10 p-5 flex flex-col justify-center items-center 
+      className={`w-8/10 p-10 flex flex-col justify-center items-center 
       min-w-80 bg-gray-100 h-full pt-30 rounded-3xl  border-b-neutral-400 
       border-b-4 shadow-lg 
       ${visible ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`}
@@ -48,11 +48,9 @@ function Home() {
         <h2 className="font-bold text-3xl">{text}</h2>
         <p className="mb-5 text-lg">Hyderabad,India</p>
         <p className="text-lg text-pretty mt-15">
-          A B-Tech AIML student. Focused on 
-          <strong className="text-2xl  text-gray-600"> Full Stack Development </strong> powered by 
-          <strong className="text-2xl  text-gray-600"> Artificial Inteligence </strong>.<br/>
-          Currenlty learning MERN stack and exploring AI technologies.
-          <br />
+          A B.Tech AI & ML student passionate about transforming data into intelligent systems.
+Learning <strong className="text-2xl  text-gray-600"> full-stack web development </strong> to seamlessly integrate <strong className="text-2xl  text-gray-600"> AI/ML models </strong> into scalable, production-ready applications.<br/>
+Focused on leveraging AI to create smarter business solutions, optimize workflows, and deliver real value.<br/>
           <span className="text-lg">Let's connect and build something amazing!</span>
         </p>
         <div className="w-full md:w-1/2 mt-5 flex flex-row justify-evenly items-center">

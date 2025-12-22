@@ -3,11 +3,13 @@ import { useInView } from "react-intersection-observer";
 
 import project1 from '../assets/project1.png';
 import project2 from '../assets/project2.png';
+import project3 from '../assets/project3.png';
 
 function Projects(){
     const projects = [
         {img: project1, title: 'My-Playing-11',duriation:"Mar 2025 - May 2025 " ,description: 'This project focuses on identifying the best possible Playing XI from the T20 World Cup 2022, using data analytics and visualization in Power BI', tools:[ "Power BI", "Power Query", "DAX", "Python (Pandas, NumPy)", "SQL"],link:"https://github.com/Sripad-Aadi/My_Playing_11"},
-        {img: project2, title: 'Triva',duriation:"Aug 2025 - Present" ,description: 'An AI-powered personal manager designed to streamline productivity. It enables smart task scheduling, conflict resolution, and categorization, while integrating features like reminders and weather insights to support daily planning.',link:"#", tools:["Next.js", "NLTK","spaCY","Tailwind CSS", "MongoDB", "OpenAI API", "FastAPI","Python","MySQL","Redis"]},
+        {img: project2, title: 'Sky-Cast',duriation:"Sep 2025 - Oct 2025" ,description: "This project focuses on collecting and analyzing real-time weather data using external APIs, with an emphasis on data processing and visualization, laying the groundwork for future machine learning-based weather prediction models.",tools:["React","Tailwind CSS","Flask","Rest APIS"],link:"https://github.com/Sripad-Aadi/skycast"},
+        {img: project3, title: 'Triva',duriation:"Dec 2025 - Present" ,description: 'An AI-powered personal manager designed to streamline productivity. It enables smart task scheduling, conflict resolution, and categorization, while integrating features like reminders and weather insights to support daily planning.',link:"#", tools:["Next.js", "NLTK","spaCY","Tailwind CSS", "MongoDB", "OpenAI API", "FastAPI","Python","MySQL","Redis"]},
     ];
     const { ref, inView } = useInView({
         threshold: 0.2, // Trigger when 20% of the component is visible
