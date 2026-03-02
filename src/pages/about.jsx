@@ -1,58 +1,64 @@
-import { IoLocationOutline } from "react-icons/io5";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 
-function About(){
-    const education = [
-                        { course: "B.Tech in Artificial Intelligence and Machine Learning", institution: "Malla Reddy Engineering College",marks:"9.0",place:"Hyderabad", year: "2023 - 2027" },
-                        { course: "Intermediate", institution: "Dr.BRACTSWRJC (COE)",marks:"970",place:"Hatnoora, Sangareddy", year: "2021 - 2023" },
-                        { course: "Secondary School Education", institution: "TSRS&JC For Boys",marks:"10",place:"Toopran,Medak", year: "2021" }
-    ]
-    const { ref, inView } = useInView({
-        threshold: 0.2, // Trigger when 20% of the component is visible
-        triggerOnce: true,
-    });
-    
+const About = () => {
+  return (
+    <section id="about" className="py-20 container mx-auto px-6 max-w-6xl">
+      
+      <h2 className="text-3xl font-bold mb-10 text-center">
+        About Me
+      </h2>
 
-    return(
-        <section id="about" className="flex flex-col justify-center items-center w-lvw h-full ">
-            <motion.div ref={ref}
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-                        transition={{ duration: 0.8 }} 
-                        className="w-8/10 flex flex-col justify-center py-10 items-center min-w-80h-full lg:h-screen h-full lg:p-10 rounded-3xl bg-gray-100  border-b-neutral-400 border-b-4 shadow-lg">
-                <div className=" flex flex-col lg:mt-10 lg:flex-row justify-center items-center lg:items-start">
-                    <div id="aboutInfo" className="flex flex-col justify-center lg:max-xl:gap-6 gap-8 items-start md:w-1/2 text-base sm:text-sm md:text-base lg:text-base  xl:text-xl text-pretty tracking-wide p-5">
-                        <h2 className="font-medium text-3xl md:text-4xl xl:text-4xl mx-auto">About</h2>
-                        <h5 className="font-semibold text-gray-600 sm:text-2xl md:text-3xl lg:text-xl xl:text-3xl">Hi! I’m Sripad.</h5>
-                        <p className="font-extralight sm:text-lg md:text-lg lg:text-lg xl:text-xl">AI & ML Enthusiast | Exploring AI & Data-Driven Applications</p>
-                        <p className="indent-10">I’m a <strong className="lg:text-2xl xl:3xl md:text-lg text-base text-gray-600">Full Stack Developer</strong> in the making, blending my interests in AI, Machine Learning, and Web Development. My journey is driven by curiosity—whether it’s understanding how data tells a story or how AI can power smarter applications.</p>
-                        <p className="indent-10">Currently exploring <strong className="lg:text-2xl xl:3xl md:text-lg text-base text-gray-600">Machine Learning</strong> and <strong className="lg:text-2xl xl:3xl md:text-lg text-base text-gray-600">Deep Learning</strong>, with a growing interest in model development, experimentation, and intelligent systems.</p>
-                    </div>
-                    <div id="education" className=" md:w-1/2 p-5">
-                        <h2 className=" font-medium text-2xl md:text-3xl xl:text-4xl mx-auto mb-10 text-center">Education</h2>
-                        <ul>
-                            {education.map((edu, index) => (
-                            <li key={index} className="border-b-2 border-gray-300 mb-10 pb-2">
-                                <h3 className="text-lg">{edu.course}</h3>
-                                <div className="flex flex-col mt-2 md:flex-row justify-between items-start">
-                                    <div>
-                                        <p className="text-base">{edu.institution}</p>
-                                        <span className="flex flex-row gap-0.5 items-center"><IoLocationOutline /><p>{edu.place}</p></span>
-                                    </div>
-                                    <div>
-                                        <p>{edu.year}</p>
-                                        <p>Marks/CGPA:{edu.marks}</p>
-                                    </div>
-                                </div>
-                            </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </motion.div>
-        </section>
-    );
-}
+      <div className="max-w-4xl mx-auto space-y-6 text-gray-700 leading-relaxed text-base">
 
-export default About
+        <p>
+          I am Sripad Aadi, a B.Tech student specializing in Artificial Intelligence 
+          and Machine Learning, focused on building practical systems that transform 
+          data into meaningful insights.
+        </p>
+
+        <p>
+          My interest in AI started with understanding how models interpret patterns 
+          in real-world datasets. This led me to develop a Fraud Detection System 
+          trained on over 6.3 million financial transactions, where I tackled extreme 
+          class imbalance and optimized performance using XGBoost and SMOTE.
+        </p>
+
+        <p>
+          Beyond machine learning, I expanded into full-stack development by building 
+          FinScope, a personal finance management web application. Through this, 
+          I learned how to integrate backend logic, databases, authentication, 
+          and dashboards into a cohesive user experience.
+        </p>
+
+        <p>
+          I am particularly interested in scalable ML pipelines, financial analytics, 
+          and building applications that connect intelligent systems with real users.
+        </p>
+
+        {/* Social Buttons */}
+        <div className="flex justify-center gap-4 mt-8">
+          <a
+            href="https://linkedin.com/in/sripad-aadi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 border border-black rounded-lg hover:bg-gray-100 transition"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/Sripad-Aadi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 bg-black text-white rounded-lg hover:scale-105 transition-transform"
+          >
+            GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default About;

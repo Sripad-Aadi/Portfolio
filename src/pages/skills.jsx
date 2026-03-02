@@ -1,85 +1,112 @@
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import React from "react";
 
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3 } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { IoLogoJavascript } from "react-icons/io";
-import { FaReact } from "react-icons/fa";
-import { FaPython } from "react-icons/fa";
-import { PiMicrosoftPowerpointLogoFill } from "react-icons/pi";
-import { BsFiletypeSql } from "react-icons/bs";
-import { SiMysql } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaJava } from "react-icons/fa";
-
-
-import {
-  SiCplusplus,
-  SiFlask,
-  SiPandas,
-  SiNumpy,
-  SiFastapi,
-  SiSqlalchemy,
-  SiJupyter
-} from "react-icons/si";
-import { FaBrain, FaCode, FaNetworkWired, FaChartBar } from "react-icons/fa";
-import { BiLogoVisualStudio } from "react-icons/bi";
-
-
-function Skills() {
-  const { ref, inView } = useInView({
-        threshold: 0.2, // Trigger when 20% of the component is visible
-        triggerOnce: true,
-  });
-
-  const skills = [
-  { name: 'HTML', icon: <FaHtml5 /> },
-  { name: 'CSS', icon: <FaCss3 /> },
-  { name: 'Tailwind CSS', icon: <RiTailwindCssFill /> },
-  { name: 'JavaScript', icon: <IoLogoJavascript /> },
-  { name: 'React', icon: <FaReact /> },
-  { name: 'Python', icon: <FaPython /> },
-  { name: 'Java', icon: <FaJava /> },
-  { name: 'C', icon: <FaCode /> },          // fallback (no official C icon)
-  { name: 'C++', icon: <SiCplusplus /> },
-  { name: 'Scikit-learn', icon: <FaBrain /> },
-  { name: 'Pandas', icon: <SiPandas /> },
-  { name: 'NumPy', icon: <SiNumpy /> },
-  { name: ' Matplotlib & Seaborn', icon: <FaChartBar /> },
-  { name: 'Flask', icon: <SiFlask /> },
-  { name: 'FastAPI', icon: <SiFastapi /> },
-  { name: 'REST APIs', icon: <FaNetworkWired /> },
-  { name: 'SQL', icon: <BsFiletypeSql /> },
-  { name: 'SQLAlchemy', icon: <SiSqlalchemy /> },
-  { name: 'MySQL', icon: <SiMysql /> },
-  { name: 'Power BI', icon: <PiMicrosoftPowerpointLogoFill /> },
-  { name: 'Git', icon: <FaGitAlt /> },
-  { name: 'GitHub', icon: <FaGithub /> },
-  { name: 'Jupyter Notebook', icon: <SiJupyter /> },
-  { name: 'VS Code', icon: <BiLogoVisualStudio /> },
-];
-
+const Skills = () => {
   return (
-    <section id="skills" className="flex flex-col justify-center items-center w-lvw h-full">
-      <motion.div ref={ref}
-                  initial={{ opacity: 0, x: -100 }}
-                  animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-                  transition={{ duration: 0.8 }}
-                  className="flex flex-col justify-center items-center w-8/10 h-full bg-gray-100 py-10 rounded-3xl border-b-neutral-400 border-b-4 shadow-lg">
-        <h2 className="text-4xl font-medium text-center my-5">Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
-          {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col md:flex-row justify-evenly items-center bg-gray-100 p-4 rounded-lg shadow-md hover:scale-125 transition-transform duration-300">
-              <span className="text-2xl md:text-4xl">{skill.icon}</span>
-              <h3 className="mt-2 text-base md:text-lg font-semibold">{skill.name}</h3>
-            </div>
-          ))}
+    <section id="skills" className="py-20 container mx-auto px-6 max-w-6xl">
+      
+      <h2 className="text-3xl font-bold mb-12 text-center">
+        Skills
+      </h2>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        {/* Languages */}
+        <div className="bg-white p-6 rounded-xl shadow-sm">
+          <h3 className="text-lg font-semibold mb-4">Languages</h3>
+          <div className="flex flex-wrap gap-2">
+            {["Python", "Java", "JavaScript", "C", "C++"].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1 text-sm bg-gray-100 rounded-md"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
-      </motion.div>
+
+        {/* AI/ML */}
+        <div className="bg-white p-6 rounded-xl shadow-sm">
+          <h3 className="text-lg font-semibold mb-4">AI / ML</h3>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Scikit-learn",
+              "XGBoost",
+              "Pandas",
+              "NumPy",
+              "Seaborn",
+              "Matplotlib",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1 text-sm bg-gray-100 rounded-md"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Full Stack */}
+        <div className="bg-white p-6 rounded-xl shadow-sm">
+          <h3 className="text-lg font-semibold mb-4">Full Stack</h3>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "React",
+              "Flask",
+              "FastAPI",
+              "REST APIs",
+              "Tailwind CSS",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1 text-sm bg-gray-100 rounded-md"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Databases */}
+        <div className="bg-white p-6 rounded-xl shadow-sm">
+          <h3 className="text-lg font-semibold mb-4">Databases</h3>
+          <div className="flex flex-wrap gap-2">
+            {["SQL", "SQLAlchemy"].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1 text-sm bg-gray-100 rounded-md"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Developer Tools */}
+        <div className="bg-white p-6 rounded-xl shadow-sm">
+          <h3 className="text-lg font-semibold mb-4">Developer Tools</h3>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Git",
+              "GitHub",
+              "Power BI",
+              "Jupyter Notebook",
+              "VS Code",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-3 py-1 text-sm bg-gray-100 rounded-md"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+      </div>
     </section>
   );
-}
+};
 
 export default Skills;

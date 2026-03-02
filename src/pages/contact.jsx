@@ -1,39 +1,70 @@
-import {motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 
-function Contact(){
-    const { ref, inView } = useInView({
-        threshold: 0.2, // Trigger when 20% of the component is visible
-        triggerOnce: true,
-    });
-    return(
-        <section id="contact" className="flex flex-col justify-center items-center w-lvw h-full">
-            <motion.div ref={ref}
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-                        transition={{ duration: 0.8 }}
-                        className="w-8/10 flex flex-col justify-center py-10 items-center min-w-80h-full lg:h-screen h-full lg:p-10 rounded-3xl bg-gray-100  border-b-neutral-400 border-b-4 shadow-lg">
-                <h2 className="font-medium text-3xl md:text-4xl xl:text-5xl mx-auto">Contact</h2>
-                <p className="text-lg text-pretty mx-5 text-gray-600 mt-5">Feel free to reach out for collaborations, inquiries, or just a chat!</p>
-                <div className="flex flex-col md:flex-row gap-6 items-center mt-5">
-                    <a href="mailto:sripadadhi135@gmail.com?subject=Portfolio%20Contact&body=Hi%20Sripad,"
-                        className="mt-5 px-6 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-600 hover:scale-110 transition-colors duration-200 transition-transform duration-500"
-                        target="_blank" rel="noopener noreferrer">
-                        Email
-                    </a>
-                    <a href="https://linkedin.com/in/sripad-aadi " target="_blank" rel="noopener noreferrer" className="mt-5 px-6 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-600 hover:scale-110 transition-colors duration-200 transition-transform duration-500">LinkedIn</a>
-                    <a
-                        href="https://wa.me/919390529345?text=Hi%20Sripad,%20I%20visited%20your%20portfolio!"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-5 px-6 py-3 bg-neutral-800 text-white rounded-lg  hover:bg-neutral-600 hover:scale-110 transition-colors duration-200 transition-transform duration-500"
-                        >
-                        WhatsApp
-                    </a>
-                </div>
-            </motion.div>
-        </section>
-    )
-}
+const Contact = () => {
+  return (
+    <section id="contact" className="py-16 container mx-auto px-6 max-w-6xl">
+      
+      <h2 className="text-3xl font-bold mb-10 text-center">
+        Contact
+      </h2>
 
-export default Contact
+      <div className="max-w-3xl mx-auto bg-gray-50 p-8 rounded-xl shadow-sm">
+        
+        <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+
+          {/* Email */}
+          <div>
+            <h3 className="font-semibold mb-1">Email</h3>
+            <a
+              href="mailto:sripadadhi135@gmail.com"
+              className="text-gray-600 hover:underline"
+            >
+              sripadadhi135@gmail.com
+            </a>
+          </div>
+
+          {/* Phone */}
+          <div>
+            <h3 className="font-semibold mb-1">Phone</h3>
+            <a
+              href="tel:+919390529345"
+              className="text-gray-600 hover:underline"
+            >
+              +91 9390529345
+            </a>
+          </div>
+
+          {/* LinkedIn */}
+          <div>
+            <h3 className="font-semibold mb-1">LinkedIn</h3>
+            <a
+              href="https://linkedin.com/in/sripad-aadi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:underline"
+            >
+              linkedin.com/in/sripad-aadi
+            </a>
+          </div>
+
+          {/* GitHub */}
+          <div>
+            <h3 className="font-semibold mb-1">GitHub</h3>
+            <a
+              href="https://github.com/Sripad-Aadi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:underline"
+            >
+              github.com/Sripad-Aadi
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

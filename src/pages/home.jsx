@@ -1,79 +1,45 @@
-import { useEffect ,useState} from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import profilePic from "../assets/profile.png"; // change name if different
 
-
-function Home() {
-  const [visible, setVisible] = useState(false);
-  const [text, setText] = useState("");
-  const fullText = "Aadi Sripad";
-
-  const { ref, inView } = useInView({
-        threshold: 0.2, // Trigger when 20% of the component is visible
-        triggerOnce: true,
-  });
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(true);
-    }, 100);
-
-    let i = 0;
-    const interval = setInterval(() => {
-      if (i < fullText.length) {
-        setText(fullText.slice(0, i + 1));
-        i++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 100);
-    
-    return () => {
-      clearTimeout(timer)
-      clearInterval(interval);
-    };
-  },[]);
-
+const Home = () => {
   return (
-    <section id="home" className="flex flex-row justify-center items-center w-lvw h-[85vh] ">
-      <motion.div ref={ref}
-                      initial={{ opacity: 0, x: -100 }}
-                      animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-                      transition={{ duration: 0.8 }} 
-      className={`w-8/10 p-10 flex flex-col justify-center items-center 
-      min-w-80 bg-gray-100 h-full pt-30 rounded-3xl  border-b-neutral-400 
-      border-b-4 shadow-lg 
-      ${visible ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`}
-      >
-        <h2 className="font-bold text-3xl">{text}</h2>
-        <p className="mb-5 text-lg">Hyderabad,India</p>
-        <p className="text-lg text-pretty mt-15">
-          A B.Tech AI & ML student passionate about transforming data into intelligent systems.
-Learning <strong className="text-2xl  text-gray-600"> full-stack web development </strong> to seamlessly integrate <strong className="text-2xl  text-gray-600"> AI/ML models </strong> into scalable, production-ready applications.<br/>
-Focused on leveraging AI to create smarter business solutions, optimize workflows, and deliver real value.<br/>
-          <span className="text-lg">Let's connect and build something amazing!</span>
-        </p>
-        <div className="w-full md:w-1/2 mt-5 flex flex-row justify-evenly items-center">
-          <a
-            href="https://wa.me/919390529345?text=Hi%20Sripad,%20I%20visited%20your%20portfolio!"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-600 hover:scale-110 transition-colors duration-200 transition-transform duration-500"
-            >
-            Contact
-          </a>
+    <section id="home" className="py-20 container mx-auto px-6 max-w-6xl">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+        
+        {/* Profile Image */}
+        <div className="flex justify-center md:justify-start">
+          <img
+            src={profilePic}
+            alt="Sripad Aadi"
+            className="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover shadow-lg border-4 border-gray-200"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Sripad Aadi
+          </h1>
+
+          <h2 className="text-xl md:text-2xl font-medium text-gray-600 mb-2">
+            Machine Learning Engineer
+          </h2>
+
+          <p className="text-gray-500 mb-6">
+            Hyderabad, India
+          </p>
+
           <a
             href="/sripad-aadi-resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-600 hover:scale-110 transition-colors duration-200 transition-transform duration-500"
-            >
-            Resume
+            download
+            className="inline-block bg-black text-white px-6 py-3 rounded-lg transition-transform duration-300 hover:scale-105"
+          >
+            Download Resume
           </a>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
-}
+};
 
 export default Home;

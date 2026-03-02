@@ -1,24 +1,30 @@
-
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/home";
-import Body from "./components/body";
+import About from "./pages/about";
+import Education from "./pages/education";
+import Skills from "./pages/skills";
+import Projects from "./pages/projects";
+import Contact from "./pages/contact";
 
 function App() {
   return (
-    <Router
-      future={{
-        v7_startTransition: true,
-        v7_relativeSplatPath: true,
-      }}
-    >
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Body />} /> {/* Home is rendered inside Outlet */}
+          <Route index element={
+            <>
+              <Home />
+              <About />
+              <Education />
+              <Skills />
+              <Projects />
+              <Contact />
+            </>
+          } />
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
