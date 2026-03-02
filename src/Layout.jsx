@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 function Layout() {
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center pt-[12vh]'>
       <Navbar />
       <Outlet /> {/* This renders the page inside */}
       <Footer />

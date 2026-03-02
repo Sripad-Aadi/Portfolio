@@ -18,7 +18,7 @@ function Navbar() {
                 initial={{ opacity: 0, y: -50 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
-                className="flex justify-between md:justify-center items-center h-[12vh] w-screen bg-white">
+                className="fixed top-0 left-0 right-0 z-50 flex justify-between md:justify-center items-center h-[12vh] w-screen bg-white shadow-md">
       <div className="flex justify-center items-center px-6 py-4">
         <img 
           src="/logo.png" 

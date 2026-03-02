@@ -19,9 +19,13 @@ import {
   SiCplusplus,
   SiFlask,
   SiPandas,
-  SiNumpy
+  SiNumpy,
+  SiFastapi,
+  SiSqlalchemy,
+  SiJupyter
 } from "react-icons/si";
-import { FaBrain, FaCode } from "react-icons/fa";
+import { FaBrain, FaCode, FaNetworkWired, FaChartBar } from "react-icons/fa";
+import { BiLogoVisualStudio } from "react-icons/bi";
 
 
 function Skills() {
@@ -37,22 +41,24 @@ function Skills() {
   { name: 'JavaScript', icon: <IoLogoJavascript /> },
   { name: 'React', icon: <FaReact /> },
   { name: 'Python', icon: <FaPython /> },
-
-  { name: 'SQL', icon: <BsFiletypeSql /> },
-  { name: 'MySQL', icon: <SiMysql /> },
-  { name: 'Power BI', icon: <PiMicrosoftPowerpointLogoFill /> },
-
-  { name: 'Git', icon: <FaGitAlt /> },
-  { name: 'GitHub', icon: <FaGithub /> },
-
   { name: 'Java', icon: <FaJava /> },
   { name: 'C', icon: <FaCode /> },          // fallback (no official C icon)
   { name: 'C++', icon: <SiCplusplus /> },
-
-  { name: 'Flask', icon: <SiFlask /> },
+  { name: 'Scikit-learn', icon: <FaBrain /> },
   { name: 'Pandas', icon: <SiPandas /> },
   { name: 'NumPy', icon: <SiNumpy /> },
-  { name: 'Scikit-learn', icon: <FaBrain /> },
+  { name: ' Matplotlib & Seaborn', icon: <FaChartBar /> },
+  { name: 'Flask', icon: <SiFlask /> },
+  { name: 'FastAPI', icon: <SiFastapi /> },
+  { name: 'REST APIs', icon: <FaNetworkWired /> },
+  { name: 'SQL', icon: <BsFiletypeSql /> },
+  { name: 'SQLAlchemy', icon: <SiSqlalchemy /> },
+  { name: 'MySQL', icon: <SiMysql /> },
+  { name: 'Power BI', icon: <PiMicrosoftPowerpointLogoFill /> },
+  { name: 'Git', icon: <FaGitAlt /> },
+  { name: 'GitHub', icon: <FaGithub /> },
+  { name: 'Jupyter Notebook', icon: <SiJupyter /> },
+  { name: 'VS Code', icon: <BiLogoVisualStudio /> },
 ];
 
   return (
