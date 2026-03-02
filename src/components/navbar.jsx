@@ -18,8 +18,8 @@ function Navbar() {
                 initial={{ opacity: 0, y: -50 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
-                className="fixed top-0 left-0 right-0 z-50 flex justify-between md:justify-center items-center h-[12vh] w-screen bg-white shadow-md">
-      <div className="flex justify-center items-center px-6 py-4">
+                className="fixed top-0 left-1/2 -translate-x-1/2 z-50 flex justify-between md:justify-center items-center h-20 w-screen bg-white/30 backdrop-blur-lg shadow-lg border-b border-white/20">
+      <div className="flex justify-center items-center px-6 py-1">
         <img 
           src="/logo.png" 
           alt="Logo" 
@@ -88,24 +88,24 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-        <button aria-label="Open menu" onClick={toggleMenu} className="focus:outline-none md:hidden absolute top-6 right-6 z-50 p-2 rounded-md text-gray-700 hover:text-black hover:bg-gray-200 transition-colors duration-300">
+        <button aria-label="Open menu" onClick={toggleMenu} className="focus:outline-none md:hidden absolute top-4 right-4 z-50 p-2 rounded-md text-gray-700 hover:text-black hover:bg-gray-200 transition-colors duration-300">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
             {isOpen && (
-              <ul className="absolute top-16 right-6 bg-white border border-gray-200 rounded-lg shadow-lg py-2 w-40 z-50">
-                <li className="px-4 py-2 hover:bg-gray-100">
+              <ul className="absolute top-20 right-4 bg-white/30 backdrop-blur-lg border border-white/20 rounded-lg shadow-lg py-2 w-40 z-50">
+                <li className="px-4 py-2 hover:bg-white/20 transition-colors duration-200">
                   <Link smooth to={"/"} onClick={toggleMenu}>Home</Link>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100">
+                <li className="px-4 py-2 hover:bg-white/20 transition-colors duration-200">
                   <Link smooth to={"/#about"} onClick={toggleMenu}>About</Link>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100">
+                <li className="px-4 py-2 hover:bg-white/20 transition-colors duration-200">
                   <Link smooth to={"/#skills"} onClick={toggleMenu}>Skills</Link>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100">
+                <li className="px-4 py-2 hover:bg-white/20 transition-colors duration-200">
                   <Link smooth to={"/#projects"} onClick={toggleMenu}>Projects</Link>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100">
+                <li className="px-4 py-2 hover:bg-white/20 transition-colors duration-200">
                   <Link smooth to={"/#contact"} onClick={toggleMenu}>Contact</Link>
                 </li>
               </ul>
