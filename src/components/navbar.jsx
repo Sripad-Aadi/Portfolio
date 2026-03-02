@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -61,7 +62,13 @@ const Navbar = () => {
         </button>
       </div>
       {menuOpen && (
-      <div className="md:hidden bg-white shadow-md">
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: 1, height: "auto" }}
+        exit={{ opacity: 0, height: 0 }}
+        transition={{ duration: 0.3 }}
+        className="md:hidden bg-white shadow-md overflow-hidden"
+      >
         <ul className="flex flex-col items-center py-6 space-y-6 text-gray-700 font-medium">
           {navItems.map((item) => (
             <li key={item}>
@@ -75,7 +82,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
     )}
     </nav>
   );

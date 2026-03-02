@@ -1,8 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 container mx-auto px-6 max-w-6xl">
+    <motion.section
+      id="skills"
+      className="py-20 container mx-auto px-6 max-w-6xl"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       
       <h2 className="text-3xl font-bold mb-12 text-center">
         Skills
@@ -105,7 +113,7 @@ const Skills = () => {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 };
 

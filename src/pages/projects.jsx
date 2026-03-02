@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import finscopeImg from "../assets/finscope.png";
 import fraudImg from "../assets/fraud.png";
 import cricketImg from "../assets/cricket.png";
@@ -6,17 +7,42 @@ import skycastImg from "../assets/skycast.png";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <motion.section
+        id="projects"
+        className="py-20 container mx-auto px-6 max-w-6xl"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+    >
       <div className="container mx-auto px-6 max-w-6xl">
         
         <h2 className="text-3xl font-bold mb-12 text-center">
           Projects
         </h2>
 
-        <div className="space-y-16">
+        <motion.div
+          className="space-y-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.2 }
+            }
+          }}
+        >
 
           {/* FinScope */}
-          <div className="grid md:grid-cols-2 gap-10 items-center bg-white p-8 rounded-xl shadow-sm">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            transition={{ duration: 0.6 }}
+            className="grid md:grid-cols-2 gap-10 items-center bg-white p-8 rounded-xl shadow-sm"
+          >
             
             <img
               src={finscopeImg}
@@ -61,11 +87,18 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
 
           {/* Fraud Detection */}
-          <div className="grid md:grid-cols-2 gap-10 items-center bg-white p-8 rounded-xl shadow-sm">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            transition={{ duration: 0.6 }}
+            className="grid md:grid-cols-2 gap-10 items-center bg-white p-8 rounded-xl shadow-sm"
+          >
             
             <img
               src={fraudImg}
@@ -101,11 +134,18 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
 
           {/* My Playing XI */}
-          <div className="grid md:grid-cols-2 gap-10 items-center bg-white p-8 rounded-xl shadow-sm">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            transition={{ duration: 0.6 }}
+            className="grid md:grid-cols-2 gap-10 items-center bg-white p-8 rounded-xl shadow-sm"
+          >
             
             <img
               src={cricketImg}
@@ -140,11 +180,18 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
 
           {/* SkyCast Weather App */}
-          <div className="grid md:grid-cols-2 gap-10 items-center bg-white p-8 rounded-xl shadow-sm">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            transition={{ duration: 0.6 }}
+            className="grid md:grid-cols-2 gap-10 items-center bg-white p-8 rounded-xl shadow-sm"
+          >
             
             <img
               src={skycastImg}
@@ -180,11 +227,11 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

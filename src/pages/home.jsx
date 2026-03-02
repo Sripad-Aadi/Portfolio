@@ -1,19 +1,29 @@
 import React from "react";
-import profilePic from "../assets/profile.png"; // change name if different
+import profilePic from "../assets/profile.png"; 
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <section id="home" className="py-20 container mx-auto px-6 max-w-6xl">
+    <motion.section
+      id="home"
+      className="py-20 container mx-auto px-6 max-w-6xl"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="flex flex-col md:flex-row-reverse items-center justify-around gap-12">
         
         {/* Profile Image */}
         <div className="flex justify-center md:justify-start">
-          <img
+          <motion.img
             src={profilePic}
             alt="Sripad Aadi"
             loading="eager"
-            className="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover transition-opacity duration-500 opacity-0 shadow-lg border-4 border-gray-200"
-            onLoad={(e) => e.target.classList.remove("opacity-0")}
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="w-44 h-44 rounded-full object-cover shadow-lg"
           />
         </div>
 
@@ -40,7 +50,7 @@ const Home = () => {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
