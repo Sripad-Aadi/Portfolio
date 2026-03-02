@@ -21,7 +21,9 @@ const Projects = () => {
             <img
               src={finscopeImg}
               alt="FinScope Project"
-              className="rounded-lg shadow-md"
+              loading="lazy"
+              className="rounded-lg shadow-md h-64 w-full object-cover transition-opacity duration-500 opacity-0"
+              onLoad={(e) => e.target.classList.remove("opacity-0")}
             />
 
             <div>
@@ -68,7 +70,9 @@ const Projects = () => {
             <img
               src={fraudImg}
               alt="Fraud Detection Project"
-              className="rounded-lg shadow-md"
+              loading="lazy"
+              className="rounded-lg shadow-md h-64 w-full object-cover transition-opacity duration-500 opacity-0"
+              onLoad={(e) => e.target.classList.remove("opacity-0")}
             />
 
             <div>
@@ -106,7 +110,9 @@ const Projects = () => {
             <img
               src={cricketImg}
               alt="My Playing XI Project"
-              className="rounded-lg shadow-md"
+              loading="lazy"
+              className="rounded-lg shadow-md h-64 w-full object-cover transition-opacity duration-500 opacity-0"
+              onLoad={(e) => e.target.classList.remove("opacity-0")}
             />
 
             <div>
@@ -123,6 +129,16 @@ const Projects = () => {
                 <li>Built interactive dashboards for player comparison.</li>
                 <li>Selected optimal Playing XI using performance metrics.</li>
               </ul>
+              <div className="flex gap-4 mt-6">
+                <a
+                    href="https://github.com/Sripad-Aadi/My_Playing_11"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 border border-black rounded-lg hover:bg-gray-100 transition"
+                >
+                    GitHub
+                </a>
+              </div>
             </div>
           </div>
 
@@ -133,7 +149,9 @@ const Projects = () => {
             <img
               src={skycastImg}
               alt="SkyCast Weather App"
-              className="rounded-lg shadow-md"
+              loading="lazy"
+              className="rounded-lg shadow-md h-64 w-full object-cover transition-opacity duration-500 opacity-0"
+              onLoad={(e) => e.target.classList.remove("opacity-0")}
             />
 
             <div>

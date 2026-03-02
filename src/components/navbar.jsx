@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -50,8 +52,31 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
+        {/* Mobile Toggle Button */}
+        <button
+          className="md:hidden text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
       </div>
+      {menuOpen && (
+      <div className="md:hidden bg-white shadow-md">
+        <ul className="flex flex-col items-center py-6 space-y-6 text-gray-700 font-medium">
+          {navItems.map((item) => (
+            <li key={item}>
+              <a
+                href={`#${item}`}
+                onClick={() => setMenuOpen(false)}
+                className="capitalize hover:text-black transition"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
     </nav>
   );
 };

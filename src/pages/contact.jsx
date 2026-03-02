@@ -23,17 +23,6 @@ const Contact = () => {
             </a>
           </div>
 
-          {/* Phone */}
-          <div>
-            <h3 className="font-semibold mb-1">Phone</h3>
-            <a
-              href="tel:+919390529345"
-              className="text-gray-600 hover:underline"
-            >
-              +91 9390529345
-            </a>
-          </div>
-
           {/* LinkedIn */}
           <div>
             <h3 className="font-semibold mb-1">LinkedIn</h3>

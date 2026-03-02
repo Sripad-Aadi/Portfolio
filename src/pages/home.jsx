@@ -4,14 +4,16 @@ import profilePic from "../assets/profile.png"; // change name if different
 const Home = () => {
   return (
     <section id="home" className="py-20 container mx-auto px-6 max-w-6xl">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+      <div className="flex flex-col md:flex-row-reverse items-center justify-around gap-12">
         
         {/* Profile Image */}
         <div className="flex justify-center md:justify-start">
           <img
             src={profilePic}
             alt="Sripad Aadi"
-            className="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover shadow-lg border-4 border-gray-200"
+            loading="eager"
+            className="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover transition-opacity duration-500 opacity-0 shadow-lg border-4 border-gray-200"
+            onLoad={(e) => e.target.classList.remove("opacity-0")}
           />
         </div>
 

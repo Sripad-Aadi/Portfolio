@@ -10,7 +10,7 @@ const Education = () => {
           Education
         </h2>
 
-        <div className="space-y-10 max-w-3xl mx-auto">
+        <div className="space-y-6 max-w-3xl mx-auto">
 
           {/* B.Tech */}
           <div className="bg-white p-8 rounded-xl shadow-sm">
@@ -18,39 +18,45 @@ const Education = () => {
               B.Tech – CSE (AI & ML)
             </h3>
             <p className="text-gray-600 mt-1">
-              Malla Reddy Engineering College
+              Malla Reddy Engineering College - Hyderabad
             </p>
             <p className="text-gray-500 text-sm mt-2">
               2023 – Present
             </p>
             <p className="mt-2 font-medium">
-              GPA: 9.05 / 10.0
+              CGPA: 9.05 / 10.0
             </p>
           </div>
 
           {/* Class 12 */}
           <div className="bg-white p-8 rounded-xl shadow-sm">
             <h3 className="text-xl font-semibold">
-              Class 12 – TGBIE
+                Intermediate
             </h3>
-            <p className="text-gray-500 text-sm mt-2">
-              2022
+            <p className="text-gray-600 mt-1">
+                Dr. B.R. Ambedkar Telangana State Residential Junior College (COE) - Hatnoora, Sangareddy
+            </p>
+            <p className="text-gray-500 text-sm">
+                2021 – 2023
             </p>
             <p className="mt-2 font-medium">
-              97%
+                97%
             </p>
           </div>
 
           {/* Class 10 */}
           <div className="bg-white p-8 rounded-xl shadow-sm">
             <h3 className="text-xl font-semibold">
-              Class 10 – SSC
+                Secondary School Education
             </h3>
-            <p className="text-gray-500 text-sm mt-2">
-              2021
+            <p className="text-gray-600 mt-1">
+                TSRS & JC For Boys - Toopran, Medak
+            </p>
+            <p className="text-gray-500 text-sm">
+                2021
             </p>
             <p className="mt-2 font-medium">
-              100%
+              GPA: 10.0
             </p>
           </div>
 
