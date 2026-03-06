@@ -225,6 +225,16 @@ const Projects = () => {
                 >
                   Live Demo
                 </a>
+
+                <a
+                  href="https://github.com/Sripad-Aadi/skycast"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2 border border-black rounded-lg hover:bg-gray-100 transition"
+                >
+                  GitHub
+                </a>
+
               </div>
             </div>
           </motion.div>
